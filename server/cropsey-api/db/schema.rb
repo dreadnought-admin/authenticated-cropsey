@@ -10,9 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_06_155951) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_06_204722) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "music_posts", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "album_cover"
+    t.string "title"
+    t.string "record_label"
+    t.string "release_date"
+    t.string "description"
+    t.string "spotify_link"
+    t.string "bandcamp_link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_music_posts_on_user_id"
+  end
+
+  create_table "news_posts", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "title"
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_news_posts_on_user_id"
+  end
+
+  create_table "tour_dates", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "image"
+    t.string "venue"
+    t.string "city"
+    t.string "state"
+    t.string "country"
+    t.string "time"
+    t.date "date"
+    t.string "ticket_link"
+    t.string "rsvp_link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_tour_dates_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
@@ -20,6 +59,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_06_155951) do
     t.integer "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin"
   end
 
+  add_foreign_key "music_posts", "users"
+  add_foreign_key "news_posts", "users"
+  add_foreign_key "tour_dates", "users"
 end

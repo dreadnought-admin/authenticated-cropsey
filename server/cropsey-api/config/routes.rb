@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   # get "/authorized", to: "sessions#show"
   # get "/dashboard", to: "users#show"
 
+  resources :news_posts
+  resources :music_posts
+  resources :tour_dates
   
     resource :users, only: [:create]
     post "/login", to: "sessions#login"

@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  image: MyString
+  venue: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  time: MyString
+  date: 2023-04-06
+  ticket_link: MyString
+  rsvp_link: MyString
+
+two:
+  user: two
+  image: MyString
+  venue: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  time: MyString
+  date: 2023-04-06
+  ticket_link: MyString
+  rsvp_link: MyString

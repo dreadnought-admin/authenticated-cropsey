@@ -36,6 +36,9 @@
 # end
 
 class ApplicationController < ActionController::API
+    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
+    
     before_action :require_login
 
     def encode_token(payload)
@@ -75,4 +78,15 @@ class ApplicationController < ActionController::API
     def require_login
      render json: {message: 'Please Login'}, status: :unauthorized unless logged_in?
     end
+
+    private
+
+    def render_not_found_response(exception)
+        render json: { error: "#{exception.model} not found"}, status: :not_found
+    end
+    
+    def render_unprocessable_entity_response(exception)
+        render json: { errors: exception.record.errors.full_messages }, status: :unprocessable_entity
+    end  
+
 end

@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function LoginForm({handleLogin}){
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+
+    const navigate = useNavigate();
 
     const handleUsernameChange = (evt) => {
         setUsername(evt.target.value)
@@ -32,6 +35,7 @@ function LoginForm({handleLogin}){
         })
         setUsername("")
         setPassword("")
+        navigate("/")
     }
     const formDivStyle = {
         margin: "auto",
