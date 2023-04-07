@@ -52,12 +52,11 @@ const NewTourDateForm = ({tours, setTours, user}) => {
 
   return (
     <div>
-      <div style={{color: "white"}}>
+      <div className="new-date-container">
         <form onSubmit={handleSubmit} autoComplete="off">
             <h3>ADD A TOUR DATE</h3>
             <div>
-                <ul>
-                    <li>
+               
                         <label>VENUE</label>
                         <input
                         type="text"
@@ -67,9 +66,7 @@ const NewTourDateForm = ({tours, setTours, user}) => {
                         value={formData.venue}
                         onChange={handleChange}
                         />
-                    </li>
-
-                    <li>
+                    
                         <label>CITY</label>
                         <input
                         type="text"
@@ -79,9 +76,7 @@ const NewTourDateForm = ({tours, setTours, user}) => {
                         value={formData.city}
                         onChange={handleChange}
                         />
-                    </li>
-
-                    <li>
+                    
                         <label>STATE</label>
                         <input
                         type="text"
@@ -91,9 +86,7 @@ const NewTourDateForm = ({tours, setTours, user}) => {
                         value={formData.state}
                         onChange={handleChange}
                         />
-                    </li>
-
-                    <li>
+                    
                         <label>COUNTRY</label>
                         <input
                         type="text"
@@ -103,9 +96,7 @@ const NewTourDateForm = ({tours, setTours, user}) => {
                         value={formData.country}
                         onChange={handleChange}
                         />
-                    </li>
-
-                    <li>
+                    
                         <label>TIME</label>
                         <input
                         type="text"
@@ -115,9 +106,7 @@ const NewTourDateForm = ({tours, setTours, user}) => {
                         value={formData.time}
                         onChange={handleChange}
                         />
-                    </li>
-
-                    <li>
+                    
                         <label>DATE</label>
                         <input
                         type="text"
@@ -127,9 +116,7 @@ const NewTourDateForm = ({tours, setTours, user}) => {
                         value={formData.date}
                         onChange={handleChange}
                         />
-                    </li>
-
-                    <li>
+                    
                         <label>TICKET LINK</label>
                         <input
                         type="text"
@@ -139,9 +126,7 @@ const NewTourDateForm = ({tours, setTours, user}) => {
                         value={formData.ticket_link}
                         onChange={handleChange}
                         />
-                    </li>
-
-                    <li>
+                    
                         <label>RSVP LINK</label>
                         <input
                         type="text"
@@ -151,10 +136,8 @@ const NewTourDateForm = ({tours, setTours, user}) => {
                         value={formData.rsvp_link}
                         onChange={handleChange}
                         />
-                    </li>
-                </ul>
-
-                <button type="submit" onClick={handleSubmit}>ADD TOUR DATE</button>
+                    
+                <button className="login-button" type="submit" onClick={handleSubmit}>ADD TOUR DATE</button>
             </div>
         </form>
       </div>

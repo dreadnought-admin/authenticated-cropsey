@@ -60,13 +60,12 @@ const TourEditForm = ({ onUpdateTour }) => {
     }
 
   return (
-    <div style={{color: "white"}}>
-      <div>
+    <div className="">
+      <div className="edit-container">
         <form onSubmit={handleSubmit} autoComplete="off">
             <h3>EDIT TOUR DATE</h3>
             <div>
-                <ul>
-                    <li>
+
                         <label>VENUE</label>
                         <input
                         type="text"
@@ -75,9 +74,8 @@ const TourEditForm = ({ onUpdateTour }) => {
                         value={venue}
                         onChange={handleChange}
                         />
-                    </li>
-
-                    <li>
+                
+                    
                         <label>CITY</label>
                         <input
                         type="text"
@@ -86,9 +84,7 @@ const TourEditForm = ({ onUpdateTour }) => {
                         value={city}
                         onChange={handleChange}
                         />
-                    </li>
-
-                    <li>
+                   
                         <label>STATE</label>
                         <input
                         type="text"
@@ -97,9 +93,7 @@ const TourEditForm = ({ onUpdateTour }) => {
                         value={state}
                         onChange={handleChange}
                         />
-                    </li>
-
-                    <li>
+                   
                         <label>COUNTRY</label>
                         <input
                         type="text"
@@ -108,9 +102,7 @@ const TourEditForm = ({ onUpdateTour }) => {
                         value={country}
                         onChange={handleChange}
                         />
-                    </li>
-
-                    <li>
+                    
                         <label>TIME</label>
                         <input
                         type="text"
@@ -119,9 +111,7 @@ const TourEditForm = ({ onUpdateTour }) => {
                         value={time}
                         onChange={handleChange}
                         />
-                    </li>
-
-                    <li>
+                    
                         <label>DATE</label>
                         <input
                         type="text"
@@ -130,9 +120,7 @@ const TourEditForm = ({ onUpdateTour }) => {
                         value={date}
                         onChange={handleChange}
                         />
-                    </li>
-
-                    <li>
+                    
                         <label>TICKET LINK</label>
                         <input
                         type="text"
@@ -141,9 +129,7 @@ const TourEditForm = ({ onUpdateTour }) => {
                         value={ticket_link}
                         onChange={handleChange}
                         />
-                    </li>
-
-                    <li>
+                    
                         <label>RSVP LINK</label>
                         <input
                         type="text"
@@ -152,10 +138,10 @@ const TourEditForm = ({ onUpdateTour }) => {
                         value={rsvp_link}
                         onChange={handleChange}
                         />
-                    </li>
-                </ul>
+                    
+               
                 <br/>
-                <button style={{color: "white"}}>UPDATE</button>
+                <button className="login-button">UPDATE</button>
             </div>
         </form>
       </div>
