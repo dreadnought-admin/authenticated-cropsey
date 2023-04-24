@@ -1,6 +1,6 @@
 export const fetchCurrentUser = () => {
     return (dispatch) => {
-        return fetch("https://theblackmarket.herokuapp.com/authorized", {
+        return fetch("https://cropsey.herokuapp.com/authorized", {
             headers: {
                 "Content-Type": "application/json",
                 Accept: "application/json",
@@ -25,7 +25,7 @@ export const fetchCurrentUser = () => {
 export const logInUser = (userInfo) => {
     return (dispatch) => {
         dispatch({ type: "LOGGING_IN", userInfo});
-        fetch("https://theblackmarket.herokuapp.com/login", {
+        fetch("https://cropsey.herokuapp.com/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -53,7 +53,7 @@ export const logInUser = (userInfo) => {
 export const createUser = (userInfo) => {
 	return (dispatch) => {
 		dispatch({ type: "SIGNING_UP", userInfo });
-		fetch("https://theblackmarket.herokuapp.com/signup", {
+		fetch("https://cropsey.herokuapp.com/signup", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -85,7 +85,7 @@ export const refreshDashboard = (userInfo) => {
 	return (dispatch) => {
 		const { id } = userInfo;
 
-		fetch(`https://theblackmarket.herokuapp.com/users/${id}`)
+		fetch(`https://cropsey.herokuapp.com/users/${id}`)
 			.then((resp) => {
 				return resp.json();
 			})

@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
-import SignInForm from './components/SignInForm';
 import LoginForm from './components/LoginForm'
 
 import { Routes, Route } from 'react-router-dom'
@@ -39,7 +37,7 @@ function App() {
   }, [])
 
   const fetchNews = () => {
-    axios.get("https://theblackmarket.herokuapp.com/news_posts")
+    axios.get("https://cropsey.herokuapp.com/news_posts")
     .then((r) => {
       setNews(r.data)
     });
@@ -47,14 +45,14 @@ function App() {
 
 
   const fetchRelease = () => {
-     axios.get("https://theblackmarket.herokuapp.com/music_posts")
+     axios.get("https://cropsey.herokuapp.com/music_posts")
     .then((r) => {
     setRelease(r.data)
     });
   }
 
   const fetchTours = () => {
-    axios.get("https://theblackmarket.herokuapp.com/tour_dates")
+    axios.get("https://cropsey.herokuapp.com/tour_dates")
     .then((r) => {
       setTours(r.data)
     });
@@ -63,7 +61,7 @@ function App() {
   // tour CRUD
 
   const handleDeleteTour = (id) => {
-    fetch(`https://theblackmarket.herokuapp.com/tour_dates/${id}`, 
+    fetch(`https://cropsey.herokuapp.com/tour_dates/${id}`, 
     {
       method: "DELETE",
     })
@@ -102,7 +100,7 @@ function App() {
   useEffect(() => {
     const token = localStorage.getItem("token")
     if(token){
-      fetch(`https://theblackmarket.herokuapp.com/auto_login`, {
+      fetch(`https://cropsey.herokuapp.com/auto_login`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -121,7 +119,7 @@ function App() {
 
   const handleAuthClick = () => {
     const token = localStorage.getItem("token")
-    fetch(`https://theblackmarket.herokuapp.com/user_is_authed`, {
+    fetch(`https://cropsey.herokuapp.com/user_is_authed`, {
       headers: {
         "Authorization": `Bearer ${token}`
       }

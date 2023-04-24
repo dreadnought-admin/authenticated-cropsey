@@ -1,0 +1,26 @@
+{
+  "name": "cropsey-api",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client/cropsey-client && npm install && npm build && cd ..",
+    "deploy": "cp -a client/cropsey-client/build/. public/",
+    "postinstall": "npm build && npm deploy && echo 'Client built!'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreadnought-admin/authenticated-cropsey.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dreadnought-admin/authenticated-cropsey/issues"
+  },
+  "homepage": "https://github.com/dreadnought-admin/authenticated-cropsey#readme"
+}

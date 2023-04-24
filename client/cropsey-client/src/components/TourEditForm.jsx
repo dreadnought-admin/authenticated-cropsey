@@ -22,7 +22,7 @@ const TourEditForm = ({ onUpdateTour }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`https://theblackmarket.herokuapp.com/tour_dates/${id}`)
+        fetch(`https://cropsey.herokuapp.com/tour_dates/${id}`)
         .then((r) => r.json())
         .then((tour) => setFormData(tour))
     }, [id])
@@ -44,7 +44,7 @@ const TourEditForm = ({ onUpdateTour }) => {
             ticket_link: formData.ticket_link, 
             rsvp_link: formData.rsvp_link
         }
-        fetch(`https://theblackmarket.herokuapp.com/tour_dates/${id}`, 
+        fetch(`https://cropsey.herokuapp.com/tour_dates/${id}`, 
         {
             method: "PATCH",
             headers: {

@@ -11,7 +11,7 @@ const TourCard = ({ user, tour, handleDeleteTour, enterTourEdit }) => {
   if (!tour) return <Loading />
 
   const handleDelete = () => {
-    fetch(`https://theblackmarket.herokuapp.com/tour_dates/${id}`, {
+    fetch(`https://cropsey.herokuapp.com/tour_dates/${id}`, {
       method: "DELETE",
     })
     handleDeleteTour(id)
