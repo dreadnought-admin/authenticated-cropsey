@@ -22,7 +22,7 @@ const TourEditForm = ({ onUpdateTour }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:3000/tour_dates/${id}`)
+        fetch(`https://theblackmarket.herokuapp.com/tour_dates/${id}`)
         .then((r) => r.json())
         .then((tour) => setFormData(tour))
     }, [id])
@@ -44,7 +44,7 @@ const TourEditForm = ({ onUpdateTour }) => {
             ticket_link: formData.ticket_link, 
             rsvp_link: formData.rsvp_link
         }
-        fetch(`http://localhost:3000/tour_dates/${id}`, 
+        fetch(`https://theblackmarket.herokuapp.com/tour_dates/${id}`, 
         {
             method: "PATCH",
             headers: {

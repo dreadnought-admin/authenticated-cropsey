@@ -23,7 +23,7 @@ const NewTourDateForm = ({tours, setTours, user}) => {
         e.preventDefault();
         const formDataBody = { ...formData, user_id: user.id }
 
-        fetch(`http://localhost:3000/tour_dates`, {
+        fetch(`https:/theblackmarket.herokuapp.com/tour_dates`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -17,7 +17,7 @@ function LoginForm({handleLogin}){
 
     const handleSubmit = (evt) => {
         evt.preventDefault()
-        fetch(`http://localhost:3000/login`, {
+        fetch(`https://theblackmarket.herokuapp.com/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

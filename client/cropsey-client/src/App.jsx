@@ -39,7 +39,7 @@ function App() {
   }, [])
 
   const fetchNews = () => {
-    axios.get("http://localhost:3000/news_posts")
+    axios.get("https://theblackmarket.herokuapp.com/news_posts")
     .then((r) => {
       setNews(r.data)
     });
@@ -47,14 +47,14 @@ function App() {
 
 
   const fetchRelease = () => {
-     axios.get("http://localhost:3000/music_posts")
+     axios.get("https://theblackmarket.herokuapp.com/music_posts")
     .then((r) => {
     setRelease(r.data)
     });
   }
 
   const fetchTours = () => {
-    axios.get("http://localhost:3000/tour_dates")
+    axios.get("https://theblackmarket.herokuapp.com/tour_dates")
     .then((r) => {
       setTours(r.data)
     });
@@ -63,7 +63,7 @@ function App() {
   // tour CRUD
 
   const handleDeleteTour = (id) => {
-    fetch(`http://localhost:3000/tour_dates/${id}`, 
+    fetch(`https://theblackmarket.herokuapp.com/tour_dates/${id}`, 
     {
       method: "DELETE",
     })
@@ -102,7 +102,7 @@ function App() {
   useEffect(() => {
     const token = localStorage.getItem("token")
     if(token){
-      fetch(`http://localhost:3000/auto_login`, {
+      fetch(`https://theblackmarket.herokuapp.com/auto_login`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -121,7 +121,7 @@ function App() {
 
   const handleAuthClick = () => {
     const token = localStorage.getItem("token")
-    fetch(`http://localhost:3000/user_is_authed`, {
+    fetch(`https://theblackmarket.herokuapp.com/user_is_authed`, {
       headers: {
         "Authorization": `Bearer ${token}`
       }

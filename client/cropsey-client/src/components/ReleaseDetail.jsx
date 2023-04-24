@@ -12,7 +12,7 @@ const ReleaseDetail = ({ }) => {
     const [releaseDetail, setReleaseDetail] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/music_posts/${id}`)
+        axios.get(`https://theblackmarket.herokuapp.com/music_posts/${id}`)
         .then((r) => {
             setReleaseDetail(r.data)
         })
