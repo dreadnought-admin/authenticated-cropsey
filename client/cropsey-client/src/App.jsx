@@ -110,7 +110,6 @@ function App() {
       .then(resp => resp.json())
       .then(data => {
         setUser(data)
-        // console.log(data)
       })
     }
   }, [])
@@ -131,7 +130,6 @@ function App() {
     .then(data => console.log(data))
   }
 
-  console.log(user)
   // end of user authentication
 
   

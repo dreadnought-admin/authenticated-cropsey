@@ -733,74 +733,28 @@ section {
 }
 
 
-.row {
-  column-count: 2;
-  max-width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
 
-  animation: fadeInAnimation ease 3.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-.release-info {
-  color: white;
-  text-transform: uppercase;
-  font-size: 1.5em;
-  text-shadow: 1px 1px crimson; 
-  margin-bottom: 5em;
-}
-
-.release-cover > img {
-  max-width: 300px;
-  max-height: 400px;
-}
-
-.discover-button-container {
-  margin-top: 1rem !important;
-}
-
-.discover-button {
-  text-transform: uppercase;
-  width: 150px;
-	height: 50px;
-	cursor: pointer;
-	font-size: 16px;
-	font-weight: bold;
-	color:crimson;
-	background: white;
-	border: 2px solid black;
-	box-shadow: 5px 5px 0 black,
-		-5px -5px 0 black,
-		-5px 5px 0 black,
-		5px -5px 0 black;
-	transition: 500ms ease-in-out;
-}
-
-.discover-button:hover {
-  box-shadow: 20px 5px 0 white, -20px -5px 0 white;
-}
-
-.discover-button:focus {
-  outline: none;
-}
 
 .release-detail-container {
+  max-width: 100%;
+  flex-direction: column;
   column-count: 2;
+  justify-content: space-evenly;
 }
 
-.release-detail-img {
-  max-width: 75%;
-  max-height: 75%;
-  margin-left: 12rem;
+.release-detail-img > img {
+  max-width: 100%;
+  max-height: 100%;
+  left: 0;
+  
 }
 
 .release-detail-info {
-  max-width: 80%;
+  max-width: 100%;
   max-height: 100%;
+  right: 0;
+  margin-top: 25rem;
+  
 }
 
 .release-detail-info > h1 {
@@ -842,6 +796,35 @@ section {
 
 }
 
+.discover-button-container {
+  margin-top: 1rem !important;
+}
+
+.discover-button {
+  text-transform: uppercase;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color:crimson;
+  background: white;
+  border: 2px solid black;
+  box-shadow: 5px 5px 0 black,
+    -5px -5px 0 black,
+    -5px 5px 0 black,
+    5px -5px 0 black;
+  transition: 500ms ease-in-out;
+}
+
+.discover-button:hover {
+  box-shadow: 20px 5px 0 white, -20px -5px 0 white;
+}
+
+.discover-button:focus {
+  outline: none;
+}
+
 .tour-container {
   color: white;
   text-transform: uppercase;
@@ -855,10 +838,6 @@ section {
 .align-items-center {
   align-items: center!important;
 }
-
-/* .d-flex {
-  display: flex!important;
-} */
 
 .no-gutters {
   display: inline-block;
@@ -1049,1397 +1028,213 @@ label {
   transition: 0.5s;
 }
 
+.admin-buttons {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
 /* responsive */
 
-@media screen and (min-width: 1312px) {
-  .release-info {
-    color: white;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    text-shadow: 1px 1px crimson; 
-    margin-bottom: 5em;
-    width: 450px;
-  }
-
-  .release_cover {
-    width: 50%;
-    float: left;
-  }
-  
-  .release-cover > img {
-    max-width: 300px;
-    max-height: 400px;
-  }
-  
-  .discover-button-container {
-    margin-top: 1rem !important;
-  }
-  
-  .discover-button {
-    text-transform: uppercase;
-    width: 150px;
-    height: 50px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    color:crimson;
-    background: white;
-    border: 2px solid black;
-    box-shadow: 5px 5px 0 black,
-      -5px -5px 0 black,
-      -5px 5px 0 black,
-      5px -5px 0 black;
-    transition: 500ms ease-in-out;
-  }
-  
-  .discover-button:hover {
-    box-shadow: 20px 5px 0 white, -20px -5px 0 white;
-  }
-  
-  .discover-button:focus {
-    outline: none;
-  }
-}
-
-@media screen and (min-width: 1300px) and (max-width: 1600px){
-  .release-detail-container {
-    column-count: 2;
-    display: flex;
-    width: 25px;
-  }
-  
-  .release-detail-img {
-    float: left;
-    width: 50%;
-    margin: 0 auto;
-    max-width: 250px;
-    max-height: 250px;
-  }
-
-  .release-detail-img > img{ 
-    max-width: 700px;
-    max-height: 700px;
-  }
-  
-  .release-detail-info {
-    max-width: 700px;
-    width: 75%;
-    max-height: 500px;
-    margin-left: 550px;
-    margin-bottom: 350px;
-    flex-direction: column;
-  }
-  
-  .release-detail-info > h1 {
-    color: white; 
-    text-transform: uppercase;
-    font-size: 6rem;
-  }
-  
-  .release-detail-info > h2 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 4.5rem;
-  }
-  
-  .release-detail-info > h3 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 2.5rem;
-  }
-  
-  .release-detail-info > p {
-    color: white; 
-    font-size: 1.25rem;
-  }
-  
-  .release-buttons > a > button {
-    background: black;
-    color: white; 
-    padding: 20px; 
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    border: 1px solid crimson; 
-  }
-  
-  .release-buttons > a > button:hover {
-    color: white;
-    text-shadow: 2px 1px #880808; 
-    transition: 0.5s;
-  
-  }
-}
-
-
-@media screen and (max-width: 600px) {
-
+@media screen and (max-width: 900px) {
+  /* top nav bar*/
   .header {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+    background-color: transparent;
   }
-  .header > .header-link-container {
-    text-align: center;
-    font-size: 10px;
-    justify-content: center;
-  }
-
-  .header-link-container > .header-link {
-    margin: .25rem;
-  }
-
-  .logo-container > img {
-    width: 100%;
-  }
-
-  .new-album-container {
-    border-style: none;
-  }
-
-  .new-album > img {
-    display: block; 
-    height: 250px;
-    max-width: 290px;
-    justify-content: center;
-  }
-
-  .new-album-text {
-    margin-top: 2rem;
-    float: left;
-    margin: 0 auto;
-    height: 250px;
-    max-width: 290px;
-    border: none;
-  }
-
-  .new-album-text > h1 {
-    font-size: 2rem;
-  }
-
-  .new-album-text > h2 {
-    font-size: 1.5rem;
-  }
-  
-  .content > h1 {
-    font-size: 36px;
-    line-height: 50px;
-  }
-  .content > h2 {
-    font-size: 2rem;
-  }
-  .content > a > button {
-    font-size: 1rem;
-  }
-
-  .listen-now-icon-container > a > img {
-    max-width: 50px;
-  }
-
-  .social-container {
-    justify-content: center;
-    margin-left: 1rem;
-  }
-
-  .social-icon-container > a > img {
-    max-width: 50px;
-  }
-  
-}
-
-/* releases */
-
-@media screen and (min-width: 250px) and (max-width: 290px) {
-
-  .release {
-    display: inline-block;
-  }
-
-  .release-cover > img {
-    max-width: 150px;
-    display: flex;
-  }
-
-  .release-info {
-    display: inline-block;
-    width: 10rem;
-    height: 5rem;
-    text-align: center;
-    margin-top: 1.5rem;
-  }
-
-  .release-info > h1 {
-    font-size: 1rem; 
-  }
-
-  .release-info > h2 {
-    font-size: .75rem;
-  }
-
-  .release-info > p {
-    font-size: .60rem;
-  }
-
-  .discover-button {
-    max-height: 30px;
-    max-width: 100px;
-  }
-  
-  .new-album-container {
-    border-style: none;
-  }
-
-  .content > h1 {
-    font-size: 25px;
-    line-height: 50px;
-  }
-  .content > h2 {
-    font-size: 1.5rem;
-  }
-  .content > a > button {
-    font-size: .75rem;
-    padding: 0;
-    max-height: 20px;
-    max-width: 50rem;
-  }
-
-  .listen-now-icon-container > a > img {
-    max-width: 35px;
-  }
-
-  .new-album > img {
-    display: block; 
-    height: 150px;
-    max-width: 150px;
-    justify-content: center;
-  }
-
-  .new-album-text {
-    margin-top: 2rem;
-    float: left;
-    margin: 0 auto;
-    height: 250px;
-    max-width: 250px;
-    border: none;
-  }
-
-  .new-album-text > h1 {
-    font-size: 1.5rem;
-  }
-
-  .new-album-text > h2 {
-    font-size: 1rem;
-  }
-}
-
-
-@media screen and (max-width: 1233px) and (min-width: 650px){
-  .release {
-    position: relative;
-  }
-
-  .new-album-container {
-    border-style: none;
-  }
-
-  .new-album > img {
-    display: block; 
-    height: 250px;
-    max-width: 290px;
-    justify-content: center;
-  }
-
-  .new-album-text {
-    margin-top: 2rem;
-    float: left;
-    margin: 0 auto;
-    height: 250px;
-    max-width: 290px;
-    border: none;
-  }
-
-  .new-album-text > h1 {
-    font-size: 2rem;
-  }
-
-  .new-album-text > h2 {
-    font-size: 1.5rem;
-  }
-  .release-cover > img {
-    max-width: 200px;
-    display: flex-box;
-  }
-
-  .release-info {
-    display: inline-block;
-    width: 12.5rem;
-    height: 15rem;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 1.5rem;
-  }
-
-  .release-info > h1 {
-    font-size: 1rem; 
-  }
-
-  .release-info > h2 {
-    font-size: 1rem;
-  }
-
-  .release-info > p {
-    font-size: 1rem;
-  }
-
-  .discover-button {
-    max-height: 30px;
-    max-width: 100px;
-  }
-}
-
-/* for release list */
-
-@media screen and (max-width: 1201) {
-  .release {
-    display: inline-block;
-  }
-
-  .release-cover > img {
-    max-width: 100%;
-    display: flex;
-  }
-
-  .release-info {
-    display: inline-block;
-    width: 12.5rem;
-    height: 50rem;
-    text-align: center;
-    margin-top: 1.5rem;
-  }
-
-  .release-info > h1 {
-    font-size: 10rem; 
-  }
-
-  .release-info > h2 {
-    font-size: 1rem;
-  }
-
-  .release-info > p {
-    font-size: 1rem;
-  }
-
-  .discover-button {
-    max-height: 30px;
-    max-width: 100px;
-  }
-}
-
-/* for release lists*/
-
-@media screen and (max-width: 600px) and (min-width: 300px) {
-  .release {
-    display: inline-block;
-  }
-
-  .release-cover > img {
-    max-width: 225px;
-    max-height: 250px;
-    display: flex;
-  }
-
-  .release-info {
-    display: inline-block;
-    width: 100%;
-    height: 8rem;
-    text-align: center;
-    margin-top: 1.5rem;
-  }
-
-  .release-info > h1 {
-    font-size: 1rem; 
-  }
-
-  .release-info > h2 {
-    font-size: 1rem;
-  }
-
-  .release-info > p {
-    font-size: 1rem;
-  }
-
-  .discover-button {
-    max-height: 30px;
-    max-width: 100px;
-  }
-}
-
-.admin-buttons {
-  margin-top: 50px;
+  .header-link-container > a {
   float: left;
-}
-
-/* for release details */
-
-@media screen and (max-width: 376px ) and (min-width: 250px) {
-  .release-detail-container {
-    column-count: 1;
-    display: block;
+  margin: 0 .5rem .5rem 0;
+  display: block;
+  color: #880808;
+  text-align: center;
+  padding: 0;
+  text-decoration: none;
+  font-size: 25px;
   }
-  
-  .release-detail-img {
-    justify-content: center;
+  /* logo */
+  .logo-container > img {
     max-width: 100%;
-    max-height: 75%;
-    margin: 0 auto;
   }
-
-  .release-detail-img > img {
-    max-width: 250px;
-    max-height: 250px;
-  }
-  
-  .release-detail-info {
-    max-width: 80%;
-    max-height: 100%;
-    margin: 0 auto;
-  }
-  
-  .release-detail-info > h1 {
-    color: white; 
-    text-transform: uppercase;
+  /* music video banner*/
+  .content > h1 {
+    text-shadow: 2px 2px black;
     font-size: 1rem;
   }
-  
-  .release-detail-info > h2 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: .5rem;
-  }
-  
-  .release-detail-info > h3 {
-    color: white;
-    text-transform: uppercase; 
+  .content > h2 {
+    text-shadow: 1px 1px black;
     font-size: 1rem;
   }
-  
-  .release-detail-info > p {
-    color: white; 
+  .content > a {
     font-size: 1rem;
   }
-}
-
-@media screen and (max-width: 600px) and (min-width: 300px) {
-  .release-detail-container {
+  .content > a > button {
+    margin-top: 1rem;
+    font-size: 1rem;
+    width: 100px;
+    height: 25px;
+  }
+  .large-video > video {
+    width: 100% !important;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* new release */
+  .new-album-container {
+    flex-direction: column;
     column-count: 1;
-    display: block;
-  }
-  
-  .release-detail-img {
     justify-content: center;
-    max-width: 100%;
-    max-height: 75%;
-    margin: 0 auto;
+    align-items: center;
   }
-
-  .release-detail-img > img {
-    max-width: 250px;
-    max-height: 250px;
-  }
-  
-  .release-detail-info {
-    max-width: 80%;
-    max-height: 100%;
-    margin: 0 auto;
-  }
-  
-  .release-detail-info > h1 {
-    color: white; 
-    text-transform: uppercase;
-    font-size: 2rem;
-  }
-  
-  .release-detail-info > h2 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 1.5rem;
-  }
-  
-  .release-detail-info > h3 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 1.25rem;
-  }
-  
-  .release-detail-info > p {
-    color: white; 
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width: 650px) and (max-width: 1223) {
-  .release-detail-container {
-    column-count: 1;
-    display: block;
-  }
-  
-  .release-detail-img {
+  .new-album {
     justify-content: center;
-    max-width: 100%;
-    max-height: 75%;
-    margin: 0 auto;
   }
-
-  .release-detail-img > img {
-    max-width: 250px;
-    max-height: 250px;
-  }
-  
-  .release-detail-info {
-    max-width: 80%;
+  .new-album > img {
+    max-width: 12rem;
     max-height: 100%;
+    margin: 0;
+  }
+  .new-album-text {
     margin: 0 auto;
+    align-self: center;
+    border: none;
   }
-  
-  .release-detail-info > h1 {
-    color: white; 
-    text-transform: uppercase;
+  .new-album-text > h1 {
     font-size: 1rem;
   }
-  
-  .release-detail-info > h2 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: .5rem;
-  }
-  
-  .release-detail-info > h3 {
-    color: white;
-    text-transform: uppercase; 
+  .new-album-text > h2 {
     font-size: 1rem;
   }
-  
-  .release-detail-info > p {
-    color: white; 
-    font-size: 1rem;
-  }
-}
-
-/*giant monitor*/
-
-@media screen and (min-width: 1350px) and (max-width: 1500px) {
-  .release-detail-container {
+  /* listen now buttons */
+  .listen-now-container {
     display: flex;
-    width: 100%;
+    justify-content: center;
   }
-  
-  .release-detail-img {
-    max-width: 500px;
-    max-height: 75%;
-    margin-left: 12rem;
-    width: 50%;
-    float: left;
+  .listen-now-icon-container {
+    margin-bottom: 30px;
+  }
+  .listen-now-icon-container > a > img {
+    max-width: 50px;
+    margin: 10px 10px;
+  }
+  /* social media buttons */
+  .social-container { 
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 2.5;
+    margin-left: 1.5rem;
+  }
+  .social-icon-container > a > img { 
+    max-height: 25px;
+    max-width: 40px;
+    margin-right: 25px;
+    transition: all 0.35s ease-in-out;
+  }
+  /* footer */
+  .footer {
     left: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: 25px; 
   }
-
-  .release-detail-img > img {
+  .footer-container {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+  }
+  .footer-container > p {
+    font-size: 1rem;
+    color: white; 
+    margin-left: 1.5em;
+  }
+  /* release page */
+  /* release list */
+  .row {
+    flex-direction: column;
+    column-count: 1;
     max-width: 50%;
-  }
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
   
-  .release-detail-info {
-    max-width: 400px;
-    max-height: 100%;
-    margin-bottom: 150px;
-    float: left; 
-    left: 0;
-    width: 100%;
+    animation: fadeInAnimation ease 3.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   }
-  
-  .release-detail-info > h1 {
-    color: white; 
+  .release-info {
+    flex-direction: column;
+    color: white;
     text-transform: uppercase;
-    font-size: 5rem;
+    font-size: .75rem;
+    text-shadow: 1px 1px crimson; 
+    margin-bottom: 1rem;
   }
-  
-  .release-detail-info > h2 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 4rem;
-  }
-  
-  .release-detail-info > h3 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 2rem;
-  }
-  
-  .release-detail-info > p {
-    color: white; 
-    font-size: 1.5rem;
-  }
-  
-  .release-buttons > a > button {
-    background: black;
-    color: white; 
-    padding: 20px; 
-    font-size: 1.5rem;
-    margin: 4px 4px 4px 4px;
-    text-transform: uppercase;
-    border: 1px solid crimson; 
-  }
-  
-  .release-buttons > a > button:hover {
-    color: white;
-    text-shadow: 2px 1px #880808; 
-    transition: 0.5s;
-  }
-}
-
-@media screen and (min-width: 1350px) {
-  .release-detail-container {
-    column-count: 2;
-    display: flex;
-  }
-  
-  .release-detail-img {
-    max-width: 75%;
-    max-height: 75%;
-    margin-left: 12rem;
-    float: left;
-    width: 50%;
-    margin: 0 auto;
-  }
-
-  .release-detail-img > img {
-    max-width: 650px;
-    float: left;
-    left: 0;
-  }
-  
-  .release-detail-info {
-    max-width: 80%;
-    max-height: 100%;
-    margin-left: 250px;
-    margin-bottom: 150px;
-  }
-  
-  .release-detail-info > h1 {
-    color: white; 
-    text-transform: uppercase;
-    font-size: 6rem;
-  }
-  
-  .release-detail-info > h2 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 4rem;
-  }
-  
-  .release-detail-info > h3 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 2rem;
-  }
-  
-  .release-detail-info > p {
-    color: white; 
-    font-size: 1.5rem;
-  }
-  
-  .release-buttons > a > button {
-    background: black;
-    color: white; 
-    padding: 20px; 
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    border: 1px solid crimson; 
-  }
-  
-  .release-buttons > a > button:hover {
-    color: white;
-    text-shadow: 2px 1px #880808; 
-    transition: 0.5s;
-  }
-}
-
-@media screen and (max-width: 1201px) {
-  .release-detail-container {
-    column-count: 1;
-    display: block;
-  }
-  
-  .release-detail-img {
-    justify-content: center;
+  .release-cover > img {
     max-width: 100%;
-    max-height: 75%;
-    margin: 0 auto;
-  }
-
-  .release-detail-img > img {
-    max-width: 250px;
-    max-height: 250px;
-  }
-  
-  .release-detail-info {
-    max-width: 80%;
     max-height: 100%;
-    margin: 0 auto;
   }
-  
-  .release-detail-info > h1 {
-    color: white; 
-    text-transform: uppercase;
-    font-size: 1rem;
-  }
-  
-  .release-detail-info > h2 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: .5rem;
-  }
-  
-  .release-detail-info > h3 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 1rem;
-  }
-  
-  .release-detail-info > p {
-    color: white; 
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 769px) and (min-width: 700px) {
-  .release-detail-container {
-    column-count: 1;
-    display: block;
-  }
-  
-  .release-detail-img {
-    justify-content: center;
-    max-width: 100%;
-    max-height: 75%;
-    margin: 0 auto;
-  }
-
-  .release-detail-img > img {
-    max-width: 400px;
-    max-height: 400px;
-  }
-  
-  .release-detail-info {
-    max-width: 80%;
-    max-height: 100%;
-    margin: 0 auto;
-  }
-  
-  .release-detail-info > h1 {
-    color: white; 
-    text-transform: uppercase;
-    font-size: 3.5rem;
-  }
-  
-  .release-detail-info > h2 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 2.5rem;
-  }
-  
-  .release-detail-info > h3 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 1.5rem;
-  }
-  
-  .release-detail-info > p {
-    color: white; 
-    font-size: 1.75rem;
-  }
-}
-
-@media screen and (max-width: 950px) and (min-width: 800px) {
-  .release-detail-container {
-    column-count: 1;
-    display: block;
-  }
-  
-  .release-detail-img {
-    justify-content: center;
-    max-width: 100%;
-    max-height: 75%;
-    margin: 0 auto;
-  }
-
-  .release-detail-img > img {
-    max-width: 300px;
-    max-height: px;
-  }
-  
-  .release-detail-info {
-    max-width: 80%;
-    max-height: 100%;
-    margin: 0 auto;
-
-  }
-  
-  .release-detail-info > h1 {
-    color: white; 
-    text-transform: uppercase;
-    font-size: 3rem;
-  }
-  
-  .release-detail-info > h2 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 2rem;
-  }
-  
-  .release-detail-info > h3 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 1.50rem;
-  }
-  
-  .release-detail-info > p {
-    color: white; 
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 1050) {
-  .release-detail-container {
-    column-count: 2;
-    display: block;
-  }
-  
-  .release-detail-img {
-    justify-content: center;
-    max-width: 100%;
-    max-height: 75%;
-    margin: 0 auto;
-   
-  }
-
-  .release-detail-img > img {
-    max-width: 250px;
-    max-height: 250px;
-  }
-  
-  .release-detail-info {
-    max-width: 80%;
-    max-height: 100%;
-    margin: 0 auto;
-   
-  }
-  
-  .release-detail-info > h1 {
-    color: white; 
-    text-transform: uppercase;
-    font-size: 1rem;
-  }
-  
-  .release-detail-info > h2 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: .5rem;
-  }
-  
-  .release-detail-info > h3 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 1rem;
-  }
-  
-  .release-detail-info > p {
-    color: white; 
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 1050px) and (min-width: 950px) {
-  .release-detail-container {
-    column-count: 1;
-    display: block;
-  }
-  
-  .release-detail-img {
-    justify-content: center;
-    max-width: 100%;
-    max-height: 75%;
-    margin: 0 auto;
-    
-  }
-
-  .release-detail-img > img {
-    max-width: 450px;
-    max-height: 300px;
-  }
-  
-  .release-detail-info {
-    max-width: 80%;
-    max-height: 100%;
-    margin: 0 auto;
-    
-  }
-  
-  .release-detail-info > h1 {
-    color: white; 
-    text-transform: uppercase;
-    font-size: 3.5rem;
-  }
-  
-  .release-detail-info > h2 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 2.5rem;
-  }
-  
-  .release-detail-info > h3 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 2.25rem;
-  }
-  
-  .release-detail-info > p {
-    color: white; 
-    font-size: 1.50rem;
-  }
-}
-
-@media screen and (max-height: 1300px) and (min-height: 1250px) {
-  .release-detail-container {
-    column-count: 1;
-   
-    display: block;
-  }
-  
-  .release-detail-img {
-    justify-content: center;
-    max-width: 100%;
-    max-height: 75%;
-    margin: 0 auto;
-   
-  }
-
-  .release-detail-img > img {
-    max-width: 500px;
-    max-height: 500px;
-  }
-  
-  .release-detail-info {
-    max-width: 80%;
-    max-height: 100%;
-    margin: 0 auto;
-
-  }
-  
-  .release-detail-info > h1 {
-    color: white; 
-    text-transform: uppercase;
-    font-size: 3.5rem;
-  }
-  
-  .release-detail-info > h2 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 2.5rem;
-  }
-  
-  .release-detail-info > h3 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 2.25rem;
-  }
-  
-  .release-detail-info > p {
-    color: white; 
-    font-size: 1.50rem;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .header-link-container > .header-link {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .header-link-container > .header-link {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .header-link-container > .header-link {
-    font-size: 1rem;
-  }
-  .release-detail-container {
-    column-count: 1;
-    display: block;
-  }
-  
-  .release-detail-img {
-    justify-content: center;
-    max-width: 100%;
-    max-height: 75%;
-    margin: 0 auto;
-  }
-
-  .release-detail-img > img {
-    max-width: 150px;
-    max-height: 250px;
-  }
-  
-  .release-detail-info {
-    max-width: 80%;
-    max-height: 100%;
-    margin: 0 auto;
-  }
-  
-  .release-detail-info > h1 {
-    color: white; 
-    text-transform: uppercase;
-    font-size: 1.5rem;
-  }
-  
-  .release-detail-info > h2 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 1rem;
-  }
-  
-  .release-detail-info > h3 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: .85rem;
-  }
-  
-  .release-detail-info > p {
-    color: white; 
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 1300px) and (min-width: 1000px) {
-  .release-detail-container {
-    column-count: 1;
-    display: block;
-  }
-  
-  .release-detail-img {
-    justify-content: center;
-    max-width: 100%;
-    max-height: 75%;
-    margin: 0 auto;
-  }
-
-  .release-detail-img > img {
-    max-width: 500px;
-    max-height: 500px;
-  }
-  
-  .release-detail-info {
-    max-width: 80%;
-    max-height: 100%;
-    margin: 0 auto;
-  }
-  
-  .release-detail-info > h1 {
-    color: white; 
-    text-transform: uppercase;
-    font-size: 3.5rem;
-  }
-  
-  .release-detail-info > h2 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 3rem;
-  }
-  
-  .release-detail-info > h3 {
-    color: white;
-    text-transform: uppercase; 
-    font-size: 2.85rem;
-  }
-  
-  .release-detail-info > p {
-    color: white; 
-    font-size: 2.0rem;
-  }
-
-}
-
-@media screen and (max-width: 414px) {
+  /* tour/tickets page */
   .tour-container {
     color: white;
     text-transform: uppercase;
     padding-top: 15px; 
     padding-bottom: 15px;
-    justify-content: center;
+    width: 100%;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    column-count: 1;
   }
-  
   .align-items-center {
     align-items: center!important;
   }
-  
-  /* .d-flex {
-    display: flex!important;
-  } */
-  
-  .no-gutters {
-    display: inline-block;
-    justify-content: center;
-  }
-  
-  .row1 {
-    display: inline-block;
-    justify-content: center; 
-  }
-  
   .tour-buttons {
-    float: left;
     margin-top: 2rem;
   }
-  
   .tour-buttons > a > button {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     width: 100%;
     border-style: none;
     margin-bottom: 1rem;
     background: crimson;
     color: white;
     text-transform: uppercase;
-    display: inline-block;
   }
-  
-  .tour-buttons > a > button:hover {
-    transform: scale(1.05);
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
-    transition-property: all; 
-  }
-  
   .tour-container-location {
     display: block; 
-  }
-  
-  .tour-container-location > h1 {
-    font-size: 2.5rem;
-  }
-  
-  .tour-container-location > p {
-    font-size: 1.5rem;
-  }
-  
-  .tour-date {
-    font-size: 1.25rem;
-  }
-  
-  .tour-list {
-    margin: 0 5rem 5rem 5rem;
-  }
-  
-  .tour-list-tickets {
-    justify-content: center;
-    text-transform: uppercase;
-    border-bottom: 1px solid crimson;
-    margin-bottom: 2rem;
-  }
-  
-  .tour-list-tickets > h1 {
-    text-align: center;
-    font-size: 2.5rem;
-  }
-}
-
-@media screen and (max-width: 290px) and (min-width: 250px) {
-  .tour-container {
-    color: white;
-    text-transform: uppercase;
-    padding-top: 15px; 
-    padding-bottom: 15px;
-    justify-content: center;
     width: 100%;
   }
-  
-  .align-items-center {
-    align-items: center!important;
-  }
-  
-  /* .d-flex {
-    display: flex!important;
-  } */
-  
-  .no-gutters {
-    display: inline-block;
-    justify-content: center;
-  }
-  
-  .row1 {
-    display: inline-block;
-    justify-content: center; 
-  }
-  
-  .tour-buttons {
-    float: left;
-    margin-top: 2rem;
-  }
-  
-  .tour-buttons > a > button {
-    font-size: 1.5rem;
-    width: 100%;
-    border-style: none;
-    margin-bottom: 1rem;
-    background: crimson;
-    color: white;
-    text-transform: uppercase;
-    display: inline-block;
-  }
-  
-  .tour-buttons > a > button:hover {
-    transform: scale(1.05);
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
-    transition-property: all; 
-  }
-  
-  .tour-container-location {
-    display: block; 
-  }
-  
   .tour-container-location > h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
-  
   .tour-container-location > p {
     font-size: 1rem;
   }
-  
   .tour-date {
     font-size: 1rem;
   }
-  
   .tour-list {
     margin: 0 5rem 5rem 5rem;
   }
-  
   .tour-list-tickets {
     justify-content: center;
+    align-items: center;
     text-transform: uppercase;
     border-bottom: 1px solid crimson;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
-  
   .tour-list-tickets > h1 {
-    text-align: center;
-    font-size: 1rem;
+    margin: 0;
+    font-size: 3rem;
   }
-}
-
-
-@media screen and (max-width: 285px) {
-  .login-container {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    width: 175px;
-    margin: 0 auto;
-    border: 2px solid crimson;
-    padding: 1.75rem;
-  }
-  
-  .new-date-container {
-    width: 150px;
-  }
-
-  .edit-container {
-    width: 150px;
-  }
-  
-  
-  input {
-    margin-top: 0.25rem;
-    margin-bottom: 1rem;
-    padding: .10px;
-    border: none;
-    font-size: .95rem;
-    font-weight: bold;
-    transition: all 0.3s;
-    border: 2px solid var(--color);
-    display: flex;
-  }
-  
-  .login-button {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    padding: 2px;
-    background-color: crimson;
-    color: white;
-    border: none;
-  }
-  
-  .login-button:hover {
-    transform: scale(1.05);
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
-    transition-property: all;
-  }
-  
-  label {
-    float: left;
-    text-transform: uppercase;
-  }
-}
-
-@media screen and (max-width: 600px) and (min-width: 450px) {
-  .login-container {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    margin: 0 auto;
-    border: 2px solid crimson;
-    padding: 1.75rem;
-  }
-  
-  input {
-    margin-top: 0.25rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: none;
-    font-size: 1.25rem;
-    font-weight: bold;
-    transition: all 0.3s;
-    border: 2px solid var(--color);
-  }
-  
-  .login-button {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    padding: 2px;
-    background-color: crimson;
-    color: white;
-    border: none;
-  }
-  
-  .login-button:hover {
-    transform: scale(1.05);
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
-    transition-property: all;
-  }
-  
-  label {
-    margin-right: 1rem;
-    text-transform: uppercase;
-  }
-}
-
-@media screen and (max-width: 415px) and (min-width: 300px) {
+  /* admin login page */
   .login-container {
     color: white;
     display: flex;
@@ -2449,7 +1244,6 @@ label {
     border: 2px solid crimson;
     padding: 1.75rem;
   }
-  
   input {
     margin-top: 0.25rem;
     margin-bottom: 1rem;
@@ -2460,7 +1254,6 @@ label {
     transition: all 0.3s;
     border: 2px solid var(--color);
   }
-  
   .login-button {
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -2469,17 +1262,167 @@ label {
     color: white;
     border: none;
   }
-  
-  .login-button:hover {
-    transform: scale(1.05);
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
-    transition-property: all;
-  }
-  
   label {
     margin-right: 1rem;
     text-transform: uppercase;
   }
+  .admin-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* release details page */
+  .release-detail-container {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    column-count: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .release-detail-img > img {
+    margin: 0;
+    max-width: 250px;
+    max-height: 600px; 
+  }
+  .release-detail-info {
+    margin: 0;
+    max-width: 100%;
+    max-height: 25rem;
+    margin-bottom: 5rem;
+  }
+  .release-detail-info > h1 {
+    color: white; 
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+  .release-detail-info > h2 {
+    color: white;
+    text-transform: uppercase; 
+    font-size: 1.5rem;
+  }
+  .release-detail-info > h3 {
+    color: white;
+    text-transform: uppercase; 
+    font-size: 1rem;
+  }
+  .release-detail-info > p {
+    color: white; 
+    font-size: 1rem;
+  }
+  .release-buttons > a > button {
+    background: black;
+    color: white; 
+    padding: 15px; 
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: 1px solid crimson; 
+  }
 }
+
+  @media screen and (max-width: 655px) and (min-width: 250px) {
+      /* new release */
+    .new-album-container {
+      flex-direction: column;
+      column-count: 1;
+      justify-content: center;
+      align-items: center;
+    }
+    .new-album {
+      justify-content: center;
+    }
+    .new-album > img {
+      max-width: 12rem;
+      max-height: 100%;
+      margin: 0;
+    }
+    .new-album-text {
+      margin: 0 auto;
+      align-self: center;
+      border: none;
+    }
+    .new-album-text > h1 {
+      font-size: 1rem;
+    }
+    .new-album-text > h2 {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 2600px) and (min-width: 1024px) {
+    .row {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      margin-left: 25%;
+      margin-right: 25%;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    
+      animation: fadeInAnimation ease 3.5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+    
+    .release-info {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      text-transform: uppercase;
+      font-size: 1.5em;
+      text-shadow: 1px 1px crimson; 
+      margin-bottom: 5rem;
+      margin-top: 10rem;
+      margin: 0;
+      margin-left: 20rem;
+      overflow: hidden;
+    }
+    
+    .release-cover > img {
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0;
+      margin-top: 5rem;
+      float: left;
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 1468px) and (min-width: 913px) {
+    .row {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      margin-left: 25%;
+      margin-right: 25%;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    
+      animation: fadeInAnimation ease 3.5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+    
+    .release-info {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      text-transform: uppercase;
+      font-size: 1rem;
+      text-shadow: 1px 1px crimson; 
+      margin-bottom: 5rem;
+      margin-top: 10rem;
+      overflow: hidden;
+    }
+    
+    .release-cover > img {
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0;
+      margin-top: 5rem;
+      float: left;
+      width: 50%;
+    }
+  }
