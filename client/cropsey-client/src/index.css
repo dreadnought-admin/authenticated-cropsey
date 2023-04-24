@@ -733,96 +733,127 @@ section {
 }
 
 
+@media screen and (min-width: 1020px) {
 
-
-.release-detail-container {
-  max-width: 100%;
-  flex-direction: column;
-  column-count: 2;
-  justify-content: space-evenly;
-}
-
-.release-detail-img > img {
-  max-width: 100%;
-  max-height: 100%;
-  left: 0;
   
-}
-
-.release-detail-info {
-  max-width: 100%;
-  max-height: 100%;
-  right: 0;
-  margin-top: 25rem;
+  .row {
+    column-count: 2;
+    max-width: 100%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   
-}
+    animation: fadeInAnimation ease 3.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  
+  .release-info {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    text-shadow: 1px 1px crimson; 
+    margin-bottom: 5em;
+    margin-top: 4rem;
+  }
+  
+  .release-cover > img {
+    max-width: 300px;
+    max-height: 400px;
+  }
+  .release-detail-container {
+    column-count: 2;
+    display: flex;
+    margin: 0;
+  }
 
-.release-detail-info > h1 {
-  color: white; 
-  text-transform: uppercase;
-  font-size: 7rem;
-}
+  .release-detail-img {
+    max-width: 75%;
+    max-height: 75%;
+    margin-left: 4rem;
+    width: 50%;
+    margin: 0;
+  }
 
-.release-detail-info > h2 {
-  color: white;
-  text-transform: uppercase; 
-  font-size: 4rem;
-}
+  .release-detail-img > img {
+    max-width: 650px;
+    float: left;
+    left: 0;
+  }
 
-.release-detail-info > h3 {
-  color: white;
-  text-transform: uppercase; 
-  font-size: 2rem;
-}
+  .release-detail-info {
+    max-width: 80%;
+    max-height: 100%;
+    margin-left: 10rem; /* back */
+    margin-bottom: 150px;
+  }
 
-.release-detail-info > p {
-  color: white; 
-  font-size: 1.5rem;
-}
+  .release-detail-info > h1 {
+    color: white; 
+    text-transform: uppercase;
+    font-size: 6rem;
+  }
 
-.release-buttons > a > button {
-  background: black;
-  color: white; 
-  padding: 20px; 
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  border: 1px solid crimson; 
-}
+  .release-detail-info > h2 {
+    color: white;
+    text-transform: uppercase; 
+    font-size: 4rem;
+  }
 
-.release-buttons > a > button:hover {
-  color: white;
-  text-shadow: 2px 1px #880808; 
-  transition: 0.5s;
+  .release-detail-info > h3 {
+    color: white;
+    text-transform: uppercase; 
+    font-size: 2rem;
+  }
 
-}
+  .release-detail-info > p {
+    color: white; 
+    font-size: 1.5rem;
+  }
 
-.discover-button-container {
-  margin-top: 1rem !important;
-}
+  .release-buttons > a > button {
+    background: black;
+    color: white; 
+    padding: 20px; 
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border: 1px solid crimson; 
+  }
 
-.discover-button {
-  text-transform: uppercase;
-  width: 150px;
-  height: 50px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  color:crimson;
-  background: white;
-  border: 2px solid black;
-  box-shadow: 5px 5px 0 black,
-    -5px -5px 0 black,
-    -5px 5px 0 black,
-    5px -5px 0 black;
-  transition: 500ms ease-in-out;
-}
-
-.discover-button:hover {
-  box-shadow: 20px 5px 0 white, -20px -5px 0 white;
-}
-
-.discover-button:focus {
-  outline: none;
+  .release-buttons > a > button:hover {
+    color: white;
+    text-shadow: 2px 1px #880808; 
+    transition: 0.5s;
+  }
+  .discover-button-container {
+    margin-top: 1rem !important;
+  }
+  
+  .discover-button {
+    text-transform: uppercase;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color:crimson;
+    background: white;
+    border: 2px solid black;
+    box-shadow: 5px 5px 0 black,
+      -5px -5px 0 black,
+      -5px 5px 0 black,
+      5px -5px 0 black;
+    transition: 500ms ease-in-out;
+  }
+  
+  .discover-button:hover {
+    box-shadow: 20px 5px 0 white, -20px -5px 0 white;
+  }
+  
+  .discover-button:focus {
+    outline: none;
+  } 
 }
 
 .tour-container {
@@ -1036,7 +1067,7 @@ label {
 
 /* responsive */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 915px) {
   /* top nav bar*/
   .header {
     background-color: transparent;
@@ -1320,109 +1351,33 @@ label {
     text-transform: uppercase;
     border: 1px solid crimson; 
   }
+  .discover-button-container {
+    margin-top: 1rem !important;
+  }
+  
+  .discover-button {
+    text-transform: uppercase;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color:crimson;
+    background: white;
+    border: 2px solid black;
+    box-shadow: 5px 5px 0 black,
+      -5px -5px 0 black,
+      -5px 5px 0 black,
+      5px -5px 0 black;
+    transition: 500ms ease-in-out;
+  }
+  
+  .discover-button:hover {
+    box-shadow: 20px 5px 0 white, -20px -5px 0 white;
+  }
+  
+  .discover-button:focus {
+    outline: none;
+  } 
 }
 
-  @media screen and (max-width: 655px) and (min-width: 250px) {
-      /* new release */
-    .new-album-container {
-      flex-direction: column;
-      column-count: 1;
-      justify-content: center;
-      align-items: center;
-    }
-    .new-album {
-      justify-content: center;
-    }
-    .new-album > img {
-      max-width: 12rem;
-      max-height: 100%;
-      margin: 0;
-    }
-    .new-album-text {
-      margin: 0 auto;
-      align-self: center;
-      border: none;
-    }
-    .new-album-text > h1 {
-      font-size: 1rem;
-    }
-    .new-album-text > h2 {
-      font-size: 1rem;
-    }
-  }
-
-  @media screen and (max-width: 2600px) and (min-width: 1024px) {
-    .row {
-      display: flex;
-      flex-direction: column;
-      max-width: 100%;
-      margin-left: 25%;
-      margin-right: 25%;
-      margin-top: 4rem;
-      margin-bottom: 4rem;
-    
-      animation: fadeInAnimation ease 3.5s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-    }
-    
-    .release-info {
-      display: flex;
-      flex-direction: column;
-      color: white;
-      text-transform: uppercase;
-      font-size: 1.5em;
-      text-shadow: 1px 1px crimson; 
-      margin-bottom: 5rem;
-      margin-top: 10rem;
-      margin: 0;
-      margin-left: 20rem;
-      overflow: hidden;
-    }
-    
-    .release-cover > img {
-      max-width: 100%;
-      max-height: 100%;
-      margin: 0;
-      margin-top: 5rem;
-      float: left;
-      width: 50%;
-    }
-  }
-
-  @media screen and (max-width: 1468px) and (min-width: 913px) {
-    .row {
-      display: flex;
-      flex-direction: column;
-      max-width: 100%;
-      margin-left: 25%;
-      margin-right: 25%;
-      margin-top: 4rem;
-      margin-bottom: 4rem;
-    
-      animation: fadeInAnimation ease 3.5s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-    }
-    
-    .release-info {
-      display: flex;
-      flex-direction: column;
-      color: white;
-      text-transform: uppercase;
-      font-size: 1rem;
-      text-shadow: 1px 1px crimson; 
-      margin-bottom: 5rem;
-      margin-top: 10rem;
-      overflow: hidden;
-    }
-    
-    .release-cover > img {
-      max-width: 100%;
-      max-height: 100%;
-      margin: 0;
-      margin-top: 5rem;
-      float: left;
-      width: 50%;
-    }
-  }
