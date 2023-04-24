@@ -1,0 +1,2 @@
+web: PORT=5173 npm --cwd client/cropsey-api start
+api: PORT=3001 bundle exec rails s

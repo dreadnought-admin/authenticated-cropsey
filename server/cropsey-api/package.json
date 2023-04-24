@@ -8,10 +8,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd client/cropsey-client && npm install && npm build && cd ..",
-    "deploy": "cp -a client/cropsey-client/build/. public/",
-    "postinstall": "npm build && npm deploy && echo 'Client built!'"
+    "build": "npm --cwd client/cropsey-api install && npm --cwd client/cropsey-api build",
+    "deploy": "cp -a client/cropsey-api/build/. public/",
+    "heroku-postbuild": "npm build && npm deploy"
   },
   "repository": {
     "type": "git",
