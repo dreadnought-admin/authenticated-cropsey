@@ -14,12 +14,6 @@ TourDate.destroy_all
 
 puts "Creating admin accounts..."
 
-admin = User.create(
-    username: "CropseyAdmin",
-    password: "pineapple",
-    age: 100,
-    admin: true
-)
 
 puts "Admin accounts created!"
 
